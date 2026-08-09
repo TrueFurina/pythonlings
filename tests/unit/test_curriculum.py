@@ -43,6 +43,37 @@ def test_init_workspace_refuses_non_empty_directory(tmp_path: Path) -> None:
         raise AssertionError("expected WorkspaceError")
 
 
+def test_force_init_preserves_existing_gitignore_entries(tmp_path: Path) -> None:
+    target = tmp_path / "workspace"
+    target.mkdir()
+    gitignore = target / ".gitignore"
+    original = "# Local ignores\n.env\n\n*.pyc"
+    gitignore.write_text(original, encoding="utf-8")
+
+    curriculum.init_workspace(target, force=True)
+
+    expected = (
+        original
+        + "\n.pythonlings/state.json\n.pythonlings_debug.log\n__pycache__/\n"
+    )
+    assert gitignore.read_text(encoding="utf-8") == expected
+
+    curriculum.init_workspace(target, force=True)
+
+    assert gitignore.read_text(encoding="utf-8") == expected
+
+
+def test_force_init_populates_empty_gitignore(tmp_path: Path) -> None:
+    target = tmp_path / "workspace"
+    target.mkdir()
+    gitignore = target / ".gitignore"
+    gitignore.touch()
+
+    curriculum.init_workspace(target, force=True)
+
+    assert gitignore.read_text(encoding="utf-8").splitlines() == curriculum.GITIGNORE_LINES
+
+
 def test_update_workspace_preserves_user_exercise_edit(tmp_path: Path) -> None:
     target = curriculum.init_workspace(tmp_path / "workspace")
     exercise = next((target / "exercises").rglob("*.py"))
@@ -54,3 +85,19 @@ def test_update_workspace_preserves_user_exercise_edit(tmp_path: Path) -> None:
     original = target / ".pythonlings" / "originals" / exercise.relative_to(target / "exercises")
     assert original.exists()
     assert (target / "solutions" / "_answers.py").exists()
+
+
+def test_update_workspace_preserves_existing_gitignore_entries(tmp_path: Path) -> None:
+    target = curriculum.init_workspace(tmp_path / "workspace")
+    gitignore = target / ".gitignore"
+    original = "# Team rules\n.coverage\n"
+    gitignore.write_text(original, encoding="utf-8")
+
+    curriculum.update_workspace(target)
+
+    expected = original + "\n".join(curriculum.GITIGNORE_LINES) + "\n"
+    assert gitignore.read_text(encoding="utf-8") == expected
+
+    curriculum.update_workspace(target)
+
+    assert gitignore.read_text(encoding="utf-8") == expected
