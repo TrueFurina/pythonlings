@@ -71,10 +71,11 @@ def _write_workspace_gitignore(root: Path) -> None:
     if not missing_lines:
         return
 
+    line_ending = "\r\n" if "\r\n" in existing else "\n"
     with gitignore.open("a", encoding="utf-8", newline="") as file:
         if existing and not existing.endswith(("\n", "\r")):
-            file.write("\n")
-        file.write("\n".join(missing_lines) + "\n")
+            file.write(line_ending)
+        file.write(line_ending.join(missing_lines) + line_ending)
 
 
 def _sync_originals(root: Path, src_root: Path) -> None:
