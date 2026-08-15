@@ -1,10 +1,42 @@
 <!-- docs-site/assets/logo.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 264" width="64" height="64" role="img" aria-labelledby="title">
-  <title id="title">Pythonlings snake and prompt</title>
-  <path d="M198 70 C158 34 94 39 63 91 C31 145 55 210 115 224 C165 236 210 203 211 154 C212 119 187 94 154 94 C122 94 100 116 100 145 C100 173 120 191 146 191 C169 191 188 178 199 159 C204 151 211 157 211 169 L211 220" fill="none" stroke="#4B8BBE" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M176 61 C176 42 192 28 213 31 L228 33 C247 35 258 52 253 70 C249 87 232 96 214 91 L194 86 C183 83 176 74 176 61 Z" fill="#4B8BBE"/>
-  <circle cx="226" cy="55" r="8" fill="#FFD43B"/>
-  <circle cx="228" cy="55" r="3.5" fill="#23233B"/>
-  <path d="M119 121 L143 145 L119 169" fill="none" stroke="#FFD43B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M211 220 H247" fill="none" stroke="#27C93F" stroke-width="16" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="64" height="64" role="img" aria-labelledby="title desc">
+  <title id="title">Pythonlings snake mascot</title>
+  <desc id="desc">A friendly blue and yellow snake curls around a terminal prompt.</desc>
+  <g stroke="#23233B" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M337 178 C382 220 405 280 397 338 C390 391 356 432 306 450 C257 468 205 453 177 419"
+          fill="none" stroke-width="106"/>
+    <path d="M337 178 C382 220 405 280 397 338 C390 391 356 432 306 450 C257 468 205 453 177 419"
+          fill="none" stroke="#FFD43B" stroke-width="78"/>
+    <path d="M127 456 C151 417 124 380 129 337 C138 266 195 218 266 223 C333 228 378 281 375 346 C372 409 320 455 257 454 C201 453 158 411 159 356 C160 309 197 275 242 275 C283 275 313 307 312 346 C312 378 287 401 257 403 C232 405 211 388 204 365"
+          fill="none" stroke-width="116"/>
+    <path d="M127 456 C151 417 124 380 129 337 C138 266 195 218 266 223 C333 228 378 281 375 346 C372 409 320 455 257 454 C201 453 158 411 159 356 C160 309 197 275 242 275 C283 275 313 307 312 346 C312 378 287 401 257 403 C232 405 211 388 204 365"
+          fill="none" stroke="#4B8BBE" stroke-width="86"/>
+    <path d="M285 248 C325 232 351 204 346 174 C341 143 337 115 352 91"
+          fill="none" stroke-width="104"/>
+    <path d="M285 248 C325 232 351 204 346 174 C341 143 337 115 352 91"
+          fill="none" stroke="#4B8BBE" stroke-width="76"/>
+    <path d="M282 185 C255 166 246 134 254 104 C267 59 312 33 359 42 C399 49 426 78 438 116 C445 138 455 145 478 149 C507 154 522 176 516 202 C509 231 477 247 439 253 C400 258 363 250 331 229 C314 218 299 201 282 185 Z"
+          fill="#4B8BBE" stroke-width="14"/>
+  </g>
+  <path d="M319 187 C352 214 397 226 443 220 C474 216 498 204 513 190 C501 222 473 244 438 251 C399 257 361 247 331 228 C314 217 307 200 319 187 Z" fill="#FFD43B"/>
+  <ellipse cx="286" cy="91" rx="29" ry="20" transform="rotate(-42 286 91)" fill="#27C93F"/>
+  <ellipse cx="175" cy="276" rx="29" ry="19" transform="rotate(-15 175 276)" fill="#27C93F"/>
+  <ellipse cx="127" cy="421" rx="18" ry="27" transform="rotate(-8 127 421)" fill="#27C93F"/>
+  <ellipse cx="382" cy="128" rx="31" ry="39" fill="#FFFFFF" stroke="#23233B" stroke-width="8"/>
+  <ellipse cx="394" cy="132" rx="20" ry="29" fill="#23233B"/>
+  <ellipse cx="401" cy="120" rx="6" ry="9" fill="#FFFFFF"/>
+  <path d="M354 92 C369 76 389 72 408 80" fill="none" stroke="#23233B" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="474" cy="175" r="8" fill="#23233B"/>
+  <path d="M344 190 C366 214 397 225 429 224" fill="none" stroke="#23233B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M422 215 C429 215 435 211 439 205" fill="none" stroke="#23233B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M359 264 C374 288 384 315 384 342 M347 281 C362 302 370 326 370 351 M329 298 C343 315 350 333 350 354"
+        fill="none" stroke="#E3B92E" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  <rect x="186" y="306" width="171" height="108" rx="25" fill="#23233B"/>
+  <circle cx="211" cy="329" r="7" fill="#4B8BBE"/>
+  <circle cx="232" cy="329" r="7" fill="#FFD43B"/>
+  <circle cx="253" cy="329" r="7" fill="#27C93F"/>
+  <path d="M207 353 L231 371 L207 389" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 389 H284" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+  <path d="M326 409 C344 399 357 381 362 359" fill="none" stroke="#23233B" stroke-width="86" stroke-linecap="round"/>
+  <path d="M326 409 C344 399 357 381 362 359" fill="none" stroke="#4B8BBE" stroke-width="60" stroke-linecap="round"/>
 </svg>

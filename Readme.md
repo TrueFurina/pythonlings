@@ -13,7 +13,7 @@
 
 Documentation: [pythonlings.abhik.ai](https://pythonlings.abhik.ai/)
 
-**Rustlings for Python — learn by fixing 292 tiny broken programs in your terminal.**
+**Learn Python by fixing tiny broken programs.**
 
 Pythonlings helps you learn Python by fixing small broken programs and watching
 checks rerun as you type. It is built for beginner Python practice, coding

@@ -1,9 +1,18 @@
 <!-- docs-site/assets/favicon.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 264" width="64" height="64" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="64" height="64" role="img" aria-labelledby="title desc">
   <title id="title">Pythonlings snake</title>
-  <path d="M198 70 C158 34 94 39 63 91 C31 145 55 210 115 224 C165 236 210 203 211 154 C212 119 187 94 154 94 C122 94 100 116 100 145 C100 173 120 191 146 191 C169 191 188 178 199 159 C204 151 211 157 211 169 L211 220" fill="none" stroke="#4B8BBE" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M176 61 C176 42 192 28 213 31 L228 33 C247 35 258 52 253 70 C249 87 232 96 214 91 L194 86 C183 83 176 74 176 61 Z" fill="#4B8BBE"/>
-  <circle cx="226" cy="55" r="8" fill="#FFD43B"/>
-  <circle cx="228" cy="55" r="3.5" fill="#23233B"/>
-
+  <desc id="desc">The friendly Pythonlings snake head and curl.</desc>
+  <path d="M68 224 C82 198 62 174 67 142 C74 97 113 72 156 81 C190 88 212 117 210 151 C207 186 177 211 143 208 C114 205 94 182 97 155 C100 134 117 119 137 119"
+        fill="none" stroke="#23233B" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 224 C82 198 62 174 67 142 C74 97 113 72 156 81 C190 88 212 117 210 151 C207 186 177 211 143 208 C114 205 94 182 97 155 C100 134 117 119 137 119"
+        fill="none" stroke="#4B8BBE" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 91 C72 76 66 51 76 32 C89 7 122 -2 147 10 C168 20 175 39 184 52 C190 60 198 62 211 64 C230 67 240 82 236 98 C231 117 210 127 185 127 C160 126 140 116 124 103 C112 94 104 89 92 91 Z"
+        fill="#4B8BBE" stroke="#23233B" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M118 90 C139 108 169 116 198 111 C216 108 229 101 236 93 C229 113 210 125 186 127 C162 127 140 117 124 103 C116 97 113 92 118 90 Z" fill="#FFD43B"/>
+  <ellipse cx="95" cy="31" rx="17" ry="12" transform="rotate(-38 95 31)" fill="#27C93F"/>
+  <ellipse cx="151" cy="54" rx="16" ry="21" fill="#FFFFFF" stroke="#23233B" stroke-width="5"/>
+  <ellipse cx="157" cy="57" rx="10" ry="15" fill="#23233B"/>
+  <circle cx="160" cy="51" r="3" fill="#FFFFFF"/>
+  <circle cx="211" cy="87" r="5" fill="#23233B"/>
+  <path d="M137 90 C150 104 169 111 187 110" fill="none" stroke="#23233B" stroke-width="5" stroke-linecap="round"/>
 </svg>
