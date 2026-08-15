@@ -1,10 +1,15 @@
-# Pythonlings
+<!-- Readme.md -->
+<p align="center">
+  <img src="docs/assets/branding/pythonlings-hero.svg" alt="Pythonlings: Learn Python by fixing tiny broken programs." width="100%">
+</p>
 
-[![PyPI](https://img.shields.io/pypi/v/pythonlings)](https://pypi.org/project/pythonlings/)
-[![Python](https://img.shields.io/pypi/pyversions/pythonlings)](https://pypi.org/project/pythonlings/)
-[![CI](https://github.com/abhiksark/pythonlings/actions/workflows/ci.yml/badge.svg)](https://github.com/abhiksark/pythonlings/actions/workflows/ci.yml)
-[![Downloads](https://img.shields.io/pypi/dm/pythonlings)](https://pypi.org/project/pythonlings/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+<p align="center">
+  <a href="https://pypi.org/project/pythonlings/"><img src="https://img.shields.io/pypi/v/pythonlings" alt="PyPI package version"></a>
+  <a href="https://pypi.org/project/pythonlings/"><img src="https://img.shields.io/pypi/pyversions/pythonlings" alt="Supported Python versions"></a>
+  <a href="https://github.com/abhiksark/pythonlings/actions/workflows/ci.yml"><img src="https://github.com/abhiksark/pythonlings/actions/workflows/ci.yml/badge.svg" alt="Continuous integration status"></a>
+  <a href="https://pypi.org/project/pythonlings/"><img src="https://img.shields.io/pypi/dm/pythonlings" alt="Monthly PyPI downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT license"></a>
+</p>
 
 Documentation: [pythonlings.abhik.ai](https://pythonlings.abhik.ai/)
 

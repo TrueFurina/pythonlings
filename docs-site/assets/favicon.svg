@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <path d="M18 18l13 14-13 14" fill="none" stroke="#4B8BBE" stroke-width="7"
-        stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="34" y="39" width="16" height="6" rx="3" fill="#FFD43B"/>
+<!-- docs-site/assets/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 264" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">Pythonlings snake</title>
+  <path d="M198 70 C158 34 94 39 63 91 C31 145 55 210 115 224 C165 236 210 203 211 154 C212 119 187 94 154 94 C122 94 100 116 100 145 C100 173 120 191 146 191 C169 191 188 178 199 159 C204 151 211 157 211 169 L211 220" fill="none" stroke="#4B8BBE" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 61 C176 42 192 28 213 31 L228 33 C247 35 258 52 253 70 C249 87 232 96 214 91 L194 86 C183 83 176 74 176 61 Z" fill="#4B8BBE"/>
+  <circle cx="226" cy="55" r="8" fill="#FFD43B"/>
+  <circle cx="228" cy="55" r="3.5" fill="#23233B"/>
+
 </svg>
