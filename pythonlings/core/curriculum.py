@@ -59,10 +59,23 @@ def _copy_path(src: Path, dst: Path, *, overwrite: bool) -> None:
 
 
 def _write_workspace_gitignore(root: Path) -> None:
-    (root / ".gitignore").write_text(
-        "\n".join(GITIGNORE_LINES) + "\n",
-        encoding="utf-8",
-    )
+    gitignore = root / ".gitignore"
+    if gitignore.exists():
+        with gitignore.open(encoding="utf-8", newline="") as file:
+            existing = file.read()
+    else:
+        existing = ""
+
+    existing_lines = set(existing.splitlines())
+    missing_lines = [line for line in GITIGNORE_LINES if line not in existing_lines]
+    if not missing_lines:
+        return
+
+    line_ending = "\r\n" if "\r\n" in existing else "\n"
+    with gitignore.open("a", encoding="utf-8", newline="") as file:
+        if existing and not existing.endswith(("\n", "\r")):
+            file.write(line_ending)
+        file.write(line_ending.join(missing_lines) + line_ending)
 
 
 def _sync_originals(root: Path, src_root: Path) -> None:

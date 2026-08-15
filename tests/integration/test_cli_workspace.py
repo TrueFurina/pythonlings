@@ -12,6 +12,12 @@ def test_init_command_creates_workspace(tmp_path: Path) -> None:
     assert (target / "info.toml").exists()
     assert (target / "exercises").is_dir()
     assert (target / "checks").is_dir()
+    assert (target / ".gitignore").read_text(encoding="utf-8").splitlines() == [
+        ".pythonlings/state.json",
+        ".pythonlings_debug.log",
+        "__pycache__/",
+        "*.pyc",
+    ]
 
 
 def test_init_rejects_non_empty_non_workspace_dir(tmp_path: Path, capsys) -> None:
@@ -39,10 +45,21 @@ def test_init_on_existing_workspace_is_friendly_noop(tmp_path: Path, capsys) -> 
 
 def test_init_force_overwrites_existing_workspace(tmp_path: Path) -> None:
     target = tmp_path / "ws"
-    assert main(["init", "--path", str(target)]) == 0
+    target.mkdir()
+    gitignore = target / ".gitignore"
+    gitignore.write_text("# Local ignores\n.venv/\n", encoding="utf-8")
+
     code = main(["init", "--path", str(target), "--force"])
+
     assert code == 0
     assert (target / "info.toml").exists()
+    assert gitignore.read_text(encoding="utf-8") == (
+        "# Local ignores\n.venv/\n"
+        ".pythonlings/state.json\n"
+        ".pythonlings_debug.log\n"
+        "__pycache__/\n"
+        "*.pyc\n"
+    )
 
 
 def test_update_via_path_migrates_legacy_state_dir(tmp_path: Path) -> None:
@@ -70,9 +87,18 @@ def test_update_command_preserves_user_exercises(tmp_path: Path) -> None:
     assert main(["init", "--path", str(target)]) == 0
     exercise = next((target / "exercises").rglob("*.py"))
     exercise.write_text("# edited\n", encoding="utf-8")
+    gitignore = target / ".gitignore"
+    gitignore.write_text("# Team rules\n.coverage\n", encoding="utf-8")
 
     code = main(["update", "--path", str(target)])
 
     assert code == 0
     assert exercise.read_text(encoding="utf-8") == "# edited\n"
     assert (target / ".pythonlings" / "originals").is_dir()
+    assert gitignore.read_text(encoding="utf-8") == (
+        "# Team rules\n.coverage\n"
+        ".pythonlings/state.json\n"
+        ".pythonlings_debug.log\n"
+        "__pycache__/\n"
+        "*.pyc\n"
+    )
