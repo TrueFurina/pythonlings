@@ -44,6 +44,14 @@ Add the checks that match the change:
 
 Record the exact commands and their results in the pull request description.
 
+## Branch and Merge Policy
+
+- Branch from the current `main` and target pull requests to `main`.
+- Use `dev` only when an explicitly approved release plan reactivates it.
+- Keep pull requests in draft until local validation is complete and recorded.
+- Merge with a merge commit only after CI passes and review feedback is resolved.
+- Never merge or enable auto-merge without explicit maintainer approval.
+
 ## Compatibility and Architecture
 
 - Maintain Python 3.9 compatibility. Guard standard-library APIs introduced in
