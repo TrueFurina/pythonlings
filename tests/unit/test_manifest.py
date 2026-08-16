@@ -226,7 +226,7 @@ def test_load_rejects_invalid_utf8(tmp_path: Path) -> None:
 
 def test_load_wraps_info_toml_read_errors(tmp_path: Path) -> None:
     (tmp_path / "info.toml").mkdir()
-    with pytest.raises(ManifestError, match="could not read info.toml"):
+    with pytest.raises(ManifestError, match=r"could not read info\.toml"):
         load(tmp_path)
 
 
@@ -338,7 +338,7 @@ def test_load_rejects_check_symlink_escape(tmp_path: Path) -> None:
         encoding="utf-8",
     )
 
-    with pytest.raises(ManifestError, match="check path.*escapes the workspace"):
+    with pytest.raises(ManifestError, match=r"check path.*escapes the workspace"):
         load(tmp_path)
 
 

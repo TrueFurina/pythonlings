@@ -1,8 +1,8 @@
 ---
-# docs-site/index.md
 hide:
   - toc
 ---
+<!-- docs-site/index.md -->
 
 <div class="pl-hero" markdown>
   <div class="pl-eyebrow">Rustlings for Python</div>
