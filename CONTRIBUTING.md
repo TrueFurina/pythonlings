@@ -1,3 +1,4 @@
+<!-- CONTRIBUTING.md -->
 # Contributing
 
 Pythonlings is actively developed and **open to contributors** — beginners welcome.
@@ -5,10 +6,9 @@ The fastest way in is a [`good first issue`](https://github.com/abhiksark/python
 
 ## Where the work is
 
-- **[0.3.0 roadmap](docs/roadmap/0.3.0.md)** — the current focus (wider adoption
-  for beginners). Each roadmap issue is written to be picked up cold: it has
-  context, scope, the exact files to touch, and how to verify.
-- Browse open issues by label: [`good first issue`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22good+first+issue%22),
+- Track current work in the
+  [open issue tracker](https://github.com/abhiksark/pythonlings/issues?q=is%3Aissue+is%3Aopen).
+- Find contributor-ready work by label: [`good first issue`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22good+first+issue%22),
   [`help wanted`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22help+wanted%22).
 
 ## Claiming an issue
@@ -39,8 +39,21 @@ reference solution** (`tests/integration/test_solution_verify.py` enforces this)
 
 ## Pull Requests
 
-- Use focused branches named `feature/<name>` or `fix/<name>`.
+- Create focused branches from the current `dev` branch, named
+  `feature/<name>` or `fix/<name>`.
+- Open pull requests against `dev`. Feature and fix pull requests are
+  squash-merged after CI passes and review feedback is resolved.
 - Reference the issue you're closing (`Closes #NN`).
 - Include a short description, test output (`python -m pytest -q`), and
   screenshots/GIFs for TUI changes.
 - Keep PRs scoped to one issue where possible.
+
+## Release Flow
+
+```text
+feature/<name> or fix/<name> -> dev -> main -> vMAJOR.MINOR.PATCH
+```
+
+Maintainers promote a verified `dev` branch to `main` with a merge commit, not
+a squash merge. The release tag is created from the exact promoted commit on
+`main`; see [RELEASE.md](RELEASE.md) for the release checklist.

@@ -1,3 +1,4 @@
+<!-- AGENTS.md -->
 # AGENTS.md
 
 ## Scope
@@ -46,10 +47,15 @@ Record the exact commands and their results in the pull request description.
 
 ## Branch and Merge Policy
 
-- Branch from the current `main` and target pull requests to `main`.
-- Use `dev` only when an explicitly approved release plan reactivates it.
+- Follow `CONTRIBUTING.md` for branch naming, pull request content, and the
+  contributor workflow.
+- Branch from the current `dev` using `feature/<name>` or `fix/<name>`, and
+  target pull requests to `dev`.
 - Keep pull requests in draft until local validation is complete and recorded.
-- Merge with a merge commit only after CI passes and review feedback is resolved.
+- Squash-merge feature and fix pull requests into `dev` only after CI passes and
+  review feedback is resolved.
+- Promote a verified `dev` branch to `main` with a merge commit. Do not squash
+  the `dev` to `main` release promotion.
 - Never merge or enable auto-merge without explicit maintainer approval.
 
 ## Compatibility and Architecture

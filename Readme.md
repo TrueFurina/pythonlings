@@ -31,7 +31,7 @@ uvx pythonlings
 How it works: **edit** the broken exercise in the built-in editor → checks
 rerun as you type and advance you to the next one. That's the whole loop.
 
-Status: `v0.4.0`, alpha — published on PyPI as `pythonlings`.
+Status: alpha. Published on PyPI as `pythonlings`.
 
 ![Coding screen](docs/assets/screenshots/coding-screen.png)
 
@@ -193,9 +193,10 @@ together. Keep exercise and check filenames mirrored, for example
 
 ## Contributing
 
-Pythonlings is actively developed and welcomes contributors — beginners included.
-The current focus is the [0.3.0 roadmap](docs/roadmap/0.3.0.md) (wider adoption),
-and every roadmap issue is written to be picked up cold. Start with a
+Pythonlings is actively developed and welcomes contributors, including
+beginners. Current work is tracked in the
+[open issue tracker](https://github.com/abhiksark/pythonlings/issues?q=is%3Aissue+is%3Aopen).
+Start with a
 [`good first issue`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22good+first+issue%22),
 comment to claim it, and see [CONTRIBUTING.md](CONTRIBUTING.md).
 
