@@ -1,3 +1,4 @@
+<!-- CONTRIBUTING.md -->
 # Contributing
 
 Pythonlings is actively developed and **open to contributors** — beginners welcome.
@@ -39,8 +40,21 @@ reference solution** (`tests/integration/test_solution_verify.py` enforces this)
 
 ## Pull Requests
 
-- Use focused branches named `feature/<name>` or `fix/<name>`.
+- Create focused branches from the current `dev` branch, named
+  `feature/<name>` or `fix/<name>`.
+- Open pull requests against `dev`. Feature and fix pull requests are
+  squash-merged after CI passes and review feedback is resolved.
 - Reference the issue you're closing (`Closes #NN`).
 - Include a short description, test output (`python -m pytest -q`), and
   screenshots/GIFs for TUI changes.
 - Keep PRs scoped to one issue where possible.
+
+## Release Flow
+
+```text
+feature/<name> or fix/<name> -> dev -> main -> vMAJOR.MINOR.PATCH
+```
+
+Maintainers promote a verified `dev` branch to `main` with a merge commit, not
+a squash merge. The release tag is created from the exact promoted commit on
+`main`; see [RELEASE.md](RELEASE.md) for the release checklist.
