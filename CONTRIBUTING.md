@@ -6,10 +6,9 @@ The fastest way in is a [`good first issue`](https://github.com/abhiksark/python
 
 ## Where the work is
 
-- **[0.3.0 roadmap](docs/roadmap/0.3.0.md)** — the current focus (wider adoption
-  for beginners). Each roadmap issue is written to be picked up cold: it has
-  context, scope, the exact files to touch, and how to verify.
-- Browse open issues by label: [`good first issue`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22good+first+issue%22),
+- Track current work in the
+  [open issue tracker](https://github.com/abhiksark/pythonlings/issues?q=is%3Aissue+is%3Aopen).
+- Find contributor-ready work by label: [`good first issue`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22good+first+issue%22),
   [`help wanted`](https://github.com/abhiksark/pythonlings/issues?q=is%3Aopen+label%3A%22help+wanted%22).
 
 ## Claiming an issue
