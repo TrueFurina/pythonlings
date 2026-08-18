@@ -46,3 +46,18 @@ def test_missing_annotation_fails_with_clear_message(tmp_path: Path) -> None:
     assert "AssertionError" in result.stderr
     assert "count should be annotated as int" in result.stderr
     assert "NameError" not in result.stderr
+
+
+def test_none_annotation_hook_fails_with_clear_message(tmp_path: Path) -> None:
+    result = _run_case(tmp_path, "__annotate__ = None\n")
+    assert result.passed is False
+    assert "AssertionError" in result.stderr
+    assert "count should be annotated as int" in result.stderr
+    assert "TypeError" not in result.stderr
+
+
+def test_callable_annotation_hook_passes(tmp_path: Path) -> None:
+    exercise_src = "def __annotate__(format_value):\n    return {'count': int}\n"
+    result = _run_case(tmp_path, exercise_src)
+    assert result.passed is True
+    assert "type_hints1 ✓" in result.stdout
