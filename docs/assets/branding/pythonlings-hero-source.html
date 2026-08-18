@@ -18,8 +18,8 @@
   .wrap {
     box-sizing: border-box;
     width: 1280px; height: 640px;
-    display: flex; flex-direction: row; align-items: center; justify-content: space-between;
-    padding: 0 96px;
+    position: relative;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
   }
   .col { display: flex; flex-direction: column; gap: 26px; }
   .shell { display: flex; flex-direction: column; gap: 14px; font-size: 22px; }
@@ -34,8 +34,8 @@
   .wordmark .py { color: #5EA3D9; }
   .wordmark .lings { color: #FFD43B; }
   .wordmark .cursor { display: inline-block; width: 34px; height: 72px; background: #4ADE80; margin-left: 14px; }
-  .tagline { font-size: 27px; color: #8A97A5; }
-  .mascot { height: 400px; width: auto; flex-shrink: 0; }
+  .tagline { font-size: 24px; color: #8A97A5; }
+  .mascot { height: 340px; width: auto; position: absolute; right: 36px; top: 50%; transform: translateY(-50%); opacity: 0.95; }
 </style>
 </head>
 <body>
